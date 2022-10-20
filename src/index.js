@@ -38,6 +38,18 @@ class Zene {
         return this.cim + " (" + this.hossz + " sec.)";
     }
 }
+class Film {
+    constructor(cim, evszam) {
+        this.cim = cim;
+        this.evszam = evszam;
+    }
+    kiir() {
+        console.log(this.toString());
+    }
+    toString() {
+        return this.cim + "(" + this.evszam + " [year])";
+    }
+}
 /*let SpitItOut = new Zene('Spit it out', 230);
 SpitItOut.kiir();
 
@@ -46,7 +58,8 @@ TheLordOfTheRings.kiir();
 */
 let termekek = [
     new Zene('Spit it out', 230),
-    new Kony("The Lord of the Rings")
+    new Kony("The Lord of the Rings"),
+    new Film("Galaxis Őrzöi", 2021)
 ];
 for (let termek of termekek) {
     termek.kiir();

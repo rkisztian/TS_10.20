@@ -51,6 +51,25 @@ class Zene implements Multimedia{
 }
 
 
+class Film implements Multimedia{
+    cim: string;
+    evszam : number;
+
+    constructor(cim : string, evszam : number){
+        this.cim = cim;
+        this.evszam = evszam;
+    }
+
+    kiir(): void {
+        console.log(this.toString());
+    }
+    toString(): string {
+        return this.cim + "(" + this.evszam + " [year])";
+    }
+
+}
+
+
 /*let SpitItOut = new Zene('Spit it out', 230);
 SpitItOut.kiir();
 
@@ -61,6 +80,7 @@ TheLordOfTheRings.kiir();
 let termekek : Multimedia[] = [
     new Zene('Spit it out', 230)
     new Kony("The Lord of the Rings")
+    new Film("Galaxis Őrzöi", 2021)
 ];
 
 
